@@ -8,6 +8,7 @@ class Corps extends StatefulWidget {
   @override
   CORPSTATE createState() => CORPSTATE();
 }
+
 class CORPSTATE extends State<Corps> {
   @override
   Widget build(BuildContext context) {
@@ -25,33 +26,36 @@ leurs féminité et leurs
  parfum attirant.
 ''';
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Roomy",
-          style: GoogleFonts.italianno(
-            fontSize: 40,
-            color: const Color.fromRGBO(205, 151, 19, 1),
+      //appBar: AppBar(),
+      body: Stack(children: [
+        Container(
+          padding: EdgeInsets.only(top: 40, left: 19),
+          child: Text(
+            "Roomy",
+            style: GoogleFonts.italianno(
+              fontSize: 50,
+              color: const Color.fromRGBO(205, 151, 19, 1),
+            ),
           ),
         ),
-      ),
-      body: Stack(children: [
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(padding: EdgeInsets.symmetric(vertical: 25)),
+            Padding(padding: EdgeInsets.only(top: 170)),
             Image(
-              width: 155,
-              height: 270,
+              width: 190,
+              height: 300,
               image: AssetImage('assets/images/♛.jpeg'),
-              fit: BoxFit.fill,
+              fit: BoxFit.cover,
             ),
             Container(
-              transformAlignment: Alignment(-0.5, 0.6),
+              padding: EdgeInsets.only(top: 1),
+              transformAlignment: Alignment(2, -0.3),
               transform: Matrix4.rotationZ(0.4),
               child: const Image(
                 image: AssetImage('assets/images/flèche.png'),
-                width: 180,
-                height: 240,
+                width: 200,
+                height: 360,
               ),
             )
           ],
@@ -60,14 +64,9 @@ leurs féminité et leurs
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             Container(
-              padding: EdgeInsets.only(left: 3),
-              color: Colors.amber,
-              //padding: EdgeInsets.only(top:),
-
+              padding: EdgeInsets.only(right: 1, top: 140),
               child: Text.rich(
-               
                 TextSpan(
-                  
                   text: "L",
                   style: GoogleFonts.kurale(
                     color: Color.fromRGBO(0, 0, 0, 0.55),
@@ -76,18 +75,17 @@ leurs féminité et leurs
                   children: <TextSpan>[
                     TextSpan(
                       text: texte1,
-                      style: GoogleFonts.kurale(fontSize: 6),
+                      style: GoogleFonts.kurale(fontSize: 11.8),
                       //textAlign: TextAlign.left
                     )
-
                     //TextSpan(text: 'qui se respire et n’est aucunement', style:GoogleFonts.kurale(fontSize: 2)),
                   ],
                 ),
               ),
             ),
             Container(
-              color: Colors.amber,
-              //padding: EdgeInsets.only(top:1),
+              //color: Colors.amber,
+              //padding: EdgeInsets.only(top: 1),
               child: Text.rich(
                 TextSpan(
                   text: "D",
@@ -95,22 +93,22 @@ leurs féminité et leurs
                       color: Color.fromRGBO(0, 0, 0, 0.55), fontSize: 19),
                   children: <TextSpan>[
                     TextSpan(
-                        text: texte2, style: GoogleFonts.kurale(fontSize: 6)),
+                        text: texte2,
+                        style: GoogleFonts.kurale(fontSize: 11.8)),
                     //TextSpan(text: 'qui se respire et n’est aucunement', style:GoogleFonts.kurale(fontSize: 2)),
                   ],
                 ),
               ),
             ),
             Container(
-              padding: EdgeInsets.only(left: 160),
-
+              padding: EdgeInsets.only(left: 195, top: 1),
               transform: Matrix4.rotationZ(0),
               transformAlignment: Alignment(2.1, 1),
               //padding: EdgeInsets.only(top:30),
               //color: Colors.amber,
               child: const Image(
-                width: 160,
-                height: 270,
+                width: 200,
+                height: 340,
                 image: AssetImage('assets/images/🖤.jpeg'),
                 fit: BoxFit.cover,
               ),
@@ -118,8 +116,16 @@ leurs féminité et leurs
           ],
         )
       ]),
-      floatingActionButton: FloatingActionButton(
-        child: Text("c'Partie!",style: TextStyle(fontSize: 8,color: Colors.amber,)),
+      floatingActionButton: FloatingActionButton.large(
+        focusColor: Color.fromRGBO(0, 0, 0, 0.51),
+        child: Text(
+          "c'Partie!",
+          style: TextStyle(
+            fontSize: 23,
+            color: Colors.amber,
+            //fontFamily:GoogleFonts().kurale(fontSize: 6),
+          ),
+        ),
         onPressed: () {
           Navigator.pushReplacement(
               context, MaterialPageRoute(builder: (builder) => const Second()));
