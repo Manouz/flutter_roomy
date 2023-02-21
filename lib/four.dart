@@ -3,13 +3,13 @@ import 'package:flutter_roomy/second.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class Corps extends StatefulWidget {
-  const Corps({super.key});
+class four extends StatefulWidget {
+  const four({super.key});
   @override
-  CORPSTATE createState() => CORPSTATE();
+  fourTATE createState() => fourTATE();
 }
 
-class CORPSTATE extends State<Corps> {
+class fourTATE extends State<four> {
   @override
   Widget build(BuildContext context) {
     const texte1 = '''
