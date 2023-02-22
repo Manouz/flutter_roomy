@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_roomy/itemCard.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'drawer.dart';
 
 TextEditingController searchCtrl = TextEditingController();
@@ -36,22 +37,22 @@ class Second extends StatelessWidget {
               ),
             ),
             actions: [IconButton(onPressed: () {}, icon: Icon(Icons.search))],
-            bottom: const TabBar(
+            bottom: TabBar(
               tabs: <Widget>[
                 Tab(
                     icon: Text(
                   "Catalogue",
-                  style: TextStyle(color: Colors.amber, fontSize: 20),
+                  style:GoogleFonts.kurale(fontSize: 17,color: gold),
                 )),
                 Tab(
                     icon: Text(
                   "Parfurmerie",
-                  style: TextStyle(color: Colors.amber, fontSize: 17),
+                  style:GoogleFonts.kurale(fontSize: 17,color: gold),
                 )),
                 Tab(
                     icon: Text(
                   "Mode",
-                  style: TextStyle(color: Colors.amber, fontSize: 20),
+                  style:GoogleFonts.kurale(fontSize: 17,color: gold),
                 )),
               ],
             ),

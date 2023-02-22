@@ -87,7 +87,7 @@ class CORPSTATE extends State<Corps> {
             Container(
               padding: EdgeInsets.only(left: 165, top: 1),
               //transform: Matrix4.rotationZ(0),
-              transformAlignment: Alignment(2.1, 1),
+              //transformAlignment: Alignment(2.1, 1),
               //padding: EdgeInsets.only(top:30),
               //color: Colors.amber,
               child: const Image(

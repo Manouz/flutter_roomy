@@ -24,8 +24,7 @@ class ItemCard extends StatelessWidget {
               child: Column(
             children: [
               Expanded(
-                child: SizedBox(
-                  width: double.infinity,
+                child: SizedBox(width: double.infinity,
                   child: Image.asset(
                     "assets/images/bgette.jpeg",
                     fit: BoxFit.cover,
